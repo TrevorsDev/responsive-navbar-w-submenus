@@ -16,9 +16,10 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
   background: #FF7b76;
   position: relative;
-  height: 5em;
+  max-height: 6em;
   width: 100%;
   padding:  0 3em; /* Adjust padding for spacing inside nav em*/
   z-index: 1000;
@@ -48,6 +49,7 @@ a {
 nav ul {
   display: flex;
   align-items: center; /* Centers list items vertically */
+  box-sizing: border-box;
 }
 
 nav ul li {
@@ -61,6 +63,7 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   color: #FFD33D;
   font-size: 1.1rem;
   font-weight: 550;
@@ -68,14 +71,19 @@ nav ul li a {
   width: 100%;
   padding: 2em 1.5em;
   transition: background-color 0.3s ease, color .4s ease;
+  border-radius: 10px;
+  border-top: transparent solid 2px;
+  border-bottom: transparent solid 2px;
 }
 
 nav ul li a:hover {
   background-color: #4fa7b2;
-  color: #FF7b76;
+  color: white;
+  border-top: #FF7b76 solid 2px;
   border-bottom: #FF7b76 solid 2px;
+  border-radius: 10px;
   text-decoration: underline;
-  transition: background-color 0.7s ease, color .7s ease;
+  transition: background-color 0.7s ease, color .7s ease border-radius .7s ease;
   cursor: pointer;
 }
 
@@ -155,8 +163,8 @@ nav ul li a:hover {
   }
 
   .off-screen-menu.active {
-    height: 700%;
-    top: 5em;
+    height: 800%;
+    top: 4.5em;
     z-index: 1;
     border-top:#FFD33D solid 1px;
     border-bottom: #FFD33D solid 1px;
@@ -170,7 +178,8 @@ nav ul li a:hover {
 
   nav ul li a:hover {
     color: white;
-    border-bottom: none;
+    border: none;
+    border-radius: 0;
     border-left: #FFD33D dashed 2px;
     border-right: #FFD33D dashed 2px;
   }
