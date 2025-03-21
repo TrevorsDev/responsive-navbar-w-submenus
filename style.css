@@ -69,18 +69,19 @@ nav ul li a {
   font-weight: 550;
   height: 100%;
   width: 100%;
-  padding: 2em 1.5em;
+  padding: 1.5em 1.5em;
   transition: background-color 0.3s ease, color .4s ease;
   border-radius: 10px;
   border-top: transparent solid 2px;
   border-bottom: transparent solid 2px;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   background-color: #4fa7b2;
   color: white;
-  border-top: #FF7b76 solid 2px;
-  border-bottom: #FF7b76 solid 2px;
+  /* border-top: #FF7b76 solid 2px;
+  border-bottom: #FF7b76 solid 2px; */
   border-radius: 10px;
   text-decoration: underline;
   transition: background-color 0.7s ease, color .7s ease border-radius .7s ease;
@@ -148,6 +149,7 @@ nav ul li a:hover {
   
   nav {
     z-index: 1000;
+    padding:  0 1em; /* Adjust padding for spacing inside nav em*/
   }
 
   .off-screen-menu {
@@ -163,8 +165,8 @@ nav ul li a:hover {
   }
 
   .off-screen-menu.active {
-    height: 800%;
-    top: 4.5em;
+    height: 450%;
+    top: 5.5em;
     z-index: 1;
     border-top:#FFD33D solid 1px;
     border-bottom: #FFD33D solid 1px;
@@ -174,9 +176,11 @@ nav ul li a:hover {
   nav ul li {
     display: flex;
     justify-content: center;
+    height: 4em;
   }
 
-  nav ul li a:hover {
+  nav ul li a:hover,
+  nav ul li a.active {
     color: white;
     border: none;
     border-radius: 0;
